@@ -1,0 +1,5 @@
+# Add at the top of /etc/ufw/before.rules, above the existing *filter section.
+*nat
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -s 10.10.0.0/24 -o eth0 -j MASQUERADE
+COMMIT

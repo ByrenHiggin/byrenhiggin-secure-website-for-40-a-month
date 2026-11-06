@@ -1,0 +1,3 @@
+# Install with: sudo crontab -u postgres -e
+# Create the folder first: sudo -u postgres mkdir -p /var/lib/postgresql/backups
+0 2 * * * pg_dump -Fc appdb > /var/lib/postgresql/backups/appdb-$(date +\%a).dump

@@ -1,0 +1,14 @@
+[DEFAULT]
+bantime  = 1h
+findtime = 10m
+maxretry = 5
+banaction = ufw
+
+[sshd]
+enabled = true
+
+[nginx-limit-req]
+enabled = true
+
+[nginx-botsearch]
+enabled = true

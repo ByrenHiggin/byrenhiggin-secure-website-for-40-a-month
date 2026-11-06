@@ -1,0 +1,11 @@
+# Apply with: sudo chmod 600 /etc/netplan/60-via-edge.yaml && sudo netplan apply
+# Check the interface name with: ip -br addr
+network:
+  version: 2
+  ethernets:
+    eth0:
+      routes:
+        - to: default
+          via: 10.10.0.2
+      nameservers:
+        addresses: [1.1.1.1, 9.9.9.9]
